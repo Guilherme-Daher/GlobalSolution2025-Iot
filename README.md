@@ -1,43 +1,64 @@
 
-# Monitoramento de Movimentos no Escuro – Projeto IoT
+# Projeto IoT – Monitoramento de Movimentos no Escuro
 
-## Descrição
+## Visão Geral
 
-Este projeto propõe uma solução de monitoramento de movimentos em ambientes escuros, com foco especial em situações de **queda de energia**. O objetivo principal é **preservar a segurança vital das pessoas**, detectando presença em locais com baixa iluminação e emitindo alertas imediatos via som (alarme sonoro).
+Este projeto foi desenvolvido com o objetivo de **proteger residências durante quedas de energia**, quando sistemas comuns de segurança (como portões automáticos, câmeras ou iluminação) podem ficar inoperantes.
 
-A solução se insere em um contexto de **Segurança**, mitigando riscos decorrentes de falhas de energia que podem comprometer a integridade de indivíduos em ambientes vulneráveis.
+A proposta é simples: ao detectar **qualquer movimento suspeito no escuro**, o sistema emite um **alarme sonoro**, funcionando como um aviso imediato para moradores e também como uma forma de **inibir possíveis invasores**.
 
-## Componentes do Projeto
+Imagine a seguinte situação: a luz acaba, o portão da casa fica aberto, a rua está escura... e alguém mal-intencionado se aproxima. Esse projeto entra em ação nesses momentos críticos.
 
-- **main.py** – Código principal de execução do sistema de detecção.
-- **requirements.txt** – Lista de bibliotecas necessárias para rodar o projeto.
-- **alarm.wav** – Arquivo de som utilizado como alarme de detecção.
+## Objetivo
 
-## Funcionalidades
+Criar uma solução acessível que:
 
-- Monitoramento contínuo de presença via sensores (adaptável a PIR ou outros).
-- Execução de alarme sonoro ao detectar movimento no escuro.
-- Pode ser integrado a soluções maiores de monitoramento e segurança.
+- Detecta movimentos em ambientes sem iluminação.
+- Emite um **alerta sonoro imediato** ao identificar uma presença suspeita.
+- Atua como medida de **prevenção contra invasões e riscos durante apagões**.
 
-## Como Executar
+## Estrutura do Projeto
 
-1. Clone este repositório ou extraia o conteúdo.
-2. Instale as dependências com:
+- `main.py` – Código principal que detecta movimento e dispara o alarme.
+- `alarm.wav` – Som de alerta usado para assustar e alertar.
+- `requirements.txt` – Bibliotecas necessárias para executar o código.
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Como Funciona
 
-3. Execute o programa:
+- O sensor detecta qualquer movimentação no ambiente.
+- Caso seja identificado alguém se movendo no escuro, o sistema dispara um som de alarme (alto e claro).
+- Pode ser usado em entradas de casas, garagens, corredores, varandas e quintais.
 
-   ```bash
-   python main.py
-   ```
+## Como Usar
 
-> **Nota**: É necessário que o dispositivo tenha suporte a áudio para reprodução do alarme.
+```bash
+# 1. Clone o repositório:
+git clone https://github.com/Guilherme-Daher/GlobalSolution2025-Iot.git
+cd GlobalSolution2025-Iot
+
+# 2. Instale os pacotes necessários:
+pip install -r requirements.txt
+
+# 3. Execute o sistema:
+python main.py
+```
+
+> Recomendação: Use este sistema com algum sensor de movimento compatível com Raspberry Pi ou similar. A reprodução do alarme exige que o dispositivo tenha saída de áudio.
+
+## Possíveis Expansões
+
+- Integração com sistema de iluminação de emergência.
+- Notificação por aplicativo (Telegram, WhatsApp, etc.).
+- Integração com câmeras ou gravação de vídeo.
+- Alimentação via bateria ou nobreak (para continuar funcionando mesmo sem energia).
 
 ## Autores
 
-- **Guilherme Daher** – 98611  
-- **Gustavo Akio** – 550241  
-- **Heitor Nobre** – 551539
+- Guilherme Daher – RA: 98611  
+- Gustavo Akio – RA: 550241  
+- Heitor Nobre – RA: 551539
+
+---
+
+Projeto desenvolvido como parte da disciplina de **Engenharia de Software**  
+**FIAP – Global Solution 2025**
